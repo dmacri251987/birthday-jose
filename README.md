@@ -20,6 +20,7 @@
 | ♿ **Accesibilidad** | Respeta `prefers-reduced-motion`, soporte completo de teclado |
 | 🔗 **Open Graph** | Preview optimizado al compartir por WhatsApp y redes sociales |
 | 📋 **Confirmación RSVP** | Integración con Google Forms para confirmar asistencia |
+| 👗 **Dress Code** | Sección elegante con código de vestimenta y animación al scroll |
 | 🗺️ **Google Maps** | Botón "Cómo llegar" con enlace directo a la ubicación |
 | ⚡ **Ultra liviana** | Sin backend, sin base de datos, sin dependencias CSS externas |
 | 🎨 **Design system propio** | Variables CSS, tipografías premium, sin librerías UI de terceros |
@@ -46,10 +47,13 @@ Cards elegantes con iconos SVG inline que muestran:
 ### 4. 💌 RSVP — Confirmación de asistencia
 Sección emotiva con un botón **"Confirmar Asistencia"** que abre un Google Form en una nueva pestaña. Incluye validación para no abrir URLs que contengan placeholders sin reemplazar.
 
-### 5. 🌟 Footer — Cierre
+### 5. 👗 DressCode — Código de vestimenta
+Sección minimalista y elegante que indica el dress code **"Elegante Sport"**. Incluye un ícono SVG sutil de un vestido de noche, tipografía Playfair Display y animación de entrada al scroll.
+
+### 6. 🌟 Footer — Cierre
 Mensaje final emotivo, firma **"Josefina ♡"** y estrellas decorativas con animaciones sutiles.
 
-### 6. 🎵 MusicPlayer — Reproductor flotante
+### 7. 🎵 MusicPlayer — Reproductor flotante
 Botón fijo en la esquina inferior derecha con ondas animadas que indican la reproducción. Permite alternar entre **play** y **pause** de la música de fondo.
 
 ---
@@ -142,6 +146,7 @@ BirthdayJose/
         ├── Countdown.jsx + Countdown.css ← Cuenta regresiva en tiempo real
         ├── EventInfo.jsx + EventInfo.css ← Detalles del evento (horario, lugar, dirección)
         ├── RSVP.jsx + RSVP.css         ← Confirmación de asistencia (Google Forms)
+        ├── DressCode.jsx + DressCode.css ← Código de vestimenta (Elegante Sport)
         ├── MusicPlayer.jsx + MusicPlayer.css ← Reproductor de música flotante
         └── Footer.jsx + Footer.css     ← Cierre emotivo con firma
 ```

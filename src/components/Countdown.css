@@ -4,11 +4,7 @@
 
 .countdown-section {
   padding: var(--space-xl) var(--space-md);
-  background: linear-gradient(
-    180deg,
-    var(--color-ivory) 0%,
-    var(--color-ivory-warm) 100%
-  );
+  background: transparent;
 }
 
 .countdown {

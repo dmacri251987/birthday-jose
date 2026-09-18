@@ -8,7 +8,6 @@ import "./RSVP.css";
  */
 export default function RSVP() {
   const containerRef = useScrollAnimation({ threshold: 0.15 });
-  const decorRef = useScrollAnimation({ threshold: 0.1 });
 
   const handleConfirm = () => {
     if (eventData.googleFormUrl && !eventData.googleFormUrl.startsWith("[")) {

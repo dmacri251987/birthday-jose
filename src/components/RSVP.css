@@ -5,12 +5,7 @@
 .rsvp {
   position: relative;
   padding: var(--space-xl) var(--space-md);
-  background: linear-gradient(
-    180deg,
-    var(--color-rose-soft) 0%,
-    var(--color-ivory-warm) 50%,
-    var(--color-ivory) 100%
-  );
+  background: transparent;
   overflow: hidden;
 }
 

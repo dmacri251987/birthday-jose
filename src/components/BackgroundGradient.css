@@ -1,0 +1,87 @@
+/* ═══════════════════════════════════════════════════════════
+   BACKGROUND GRADIENT — Degradados radiales sutiles (premium)
+   Capa fija con múltiples capas de degradados radiales
+   que crean un efecto de textura orgánica cálida.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Contenedor principal (fijo, detrás de todo) ── */
+.bg-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--color-ivory);
+}
+
+/* ── Capas individuales ── */
+.bg-gradient__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Capa 1: Rosa suave arriba-izquierda */
+.bg-gradient__layer--1 {
+  background: radial-gradient(
+    ellipse at 20% 25%,
+    rgba(245, 230, 224, 0.4) 0%,
+    transparent 55%
+  );
+}
+
+/* Capa 2: Champagne/dorado abajo-derecha */
+.bg-gradient__layer--2 {
+  background: radial-gradient(
+    ellipse at 80% 75%,
+    rgba(212, 165, 116, 0.15) 0%,
+    transparent 50%
+  );
+}
+
+/* Capa 3: Rosa muted centro-derecha */
+.bg-gradient__layer--3 {
+  background: radial-gradient(
+    ellipse at 65% 40%,
+    rgba(232, 196, 196, 0.2) 0%,
+    transparent 45%
+  );
+}
+
+/* Capa 4: Dorado sutil arriba-derecha */
+.bg-gradient__layer--4 {
+  background: radial-gradient(
+    ellipse at 75% 15%,
+    rgba(212, 175, 55, 0.08) 0%,
+    transparent 40%
+  );
+}
+
+/* Capa 5: Rosa suave abajo-izquierda */
+.bg-gradient__layer--5 {
+  background: radial-gradient(
+    ellipse at 15% 80%,
+    rgba(212, 160, 160, 0.12) 0%,
+    transparent 45%
+  );
+}
+
+/* ── Textura de grano sutil (ruido fractal SVG) ── */
+.bg-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  mix-blend-mode: multiply;
+}

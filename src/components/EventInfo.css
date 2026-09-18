@@ -4,7 +4,8 @@
 
 .event-info {
   padding: var(--space-xl) var(--space-md);
-  background: var(--color-white);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
 }
 
 .event-info__container {

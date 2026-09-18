@@ -77,7 +77,7 @@ body {
   font-weight: 300;
   line-height: 1.7;
   color: var(--color-gray-dark);
-  background-color: var(--color-ivory);
+  background-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
