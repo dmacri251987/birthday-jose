@@ -1,0 +1,353 @@
+/* ═══════════════════════════════════════════════════════════
+   ESTILOS GLOBALES — Invitación 15 años Josefina Casara
+   Mobile-first, CSS Variables, Animaciones al scroll
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Variables CSS (Design Tokens) ── */
+:root {
+  /* Colores principales */
+  --color-ivory: #FFFEF9;
+  --color-ivory-warm: #FFF8F0;
+  --color-rose-soft: #F5E6E0;
+  --color-rose-muted: #E8C4C4;
+  --color-rose-accent: #D4A0A0;
+  --color-champagne: #D4A574;
+  --color-champagne-dark: #C9A96E;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B8860B;
+  --color-gray-dark: #2C2C2C;
+  --color-gray-medium: #4A4A4A;
+  --color-gray-light: #8A8A8A;
+  --color-white: #FFFFFF;
+
+  /* Tipografías */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Montserrat', 'Segoe UI', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  /* Tamaños de fuente (fluid) */
+  --fs-xs: clamp(0.75rem, 2vw, 0.85rem);
+  --fs-sm: clamp(0.85rem, 2.5vw, 1rem);
+  --fs-base: clamp(1rem, 2.5vw, 1.125rem);
+  --fs-md: clamp(1.125rem, 3vw, 1.35rem);
+  --fs-lg: clamp(1.5rem, 4vw, 2rem);
+  --fs-xl: clamp(2rem, 5vw, 3rem);
+  --fs-2xl: clamp(2.5rem, 7vw, 4.5rem);
+  --fs-3xl: clamp(3rem, 10vw, 6rem);
+
+  /* Espaciado */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Bordes y sombras */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.15);
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s ease;
+  --transition-slow: 0.8s ease;
+}
+
+/* ── Reset CSS ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-gray-dark);
+  background-color: var(--color-ivory);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ── Keyframe Animations ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ── Clases utilitarias para animaciones al scroll ── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+.animate-on-scroll.delay-5 { transition-delay: 0.5s; }
+
+/* Variantes de animación al scroll */
+.animate-on-scroll.fade-in {
+  transform: none;
+}
+
+.animate-on-scroll.scale-in {
+  transform: scale(0.9);
+}
+.animate-on-scroll.scale-in.animated {
+  transform: scale(1);
+}
+
+.animate-on-scroll.slide-left {
+  transform: translateX(-40px);
+}
+.animate-on-scroll.slide-left.animated {
+  transform: translateX(0);
+}
+
+.animate-on-scroll.slide-right {
+  transform: translateX(40px);
+}
+.animate-on-scroll.slide-right.animated {
+  transform: translateX(0);
+}
+
+/* ── Botones elegantes ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-champagne), var(--color-gold));
+  color: var(--color-white);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-champagne-dark);
+  border: 1.5px solid var(--color-champagne);
+}
+
+.btn-outline:hover {
+  background: var(--color-champagne);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ── Utilidades de texto ── */
+.text-script {
+  font-family: var(--font-script);
+}
+
+.text-display {
+  font-family: var(--font-display);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ── Separador decorativo ── */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: var(--space-md) auto;
+  width: fit-content;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-champagne), transparent);
+}
+
+.ornament-icon {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+/* ── Sección base ── */
+.section {
+  padding: var(--space-xl) var(--space-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  color: var(--color-gray-dark);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* ── Responsive: Tablet ── */
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+}
+
+/* ── Prefers reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}

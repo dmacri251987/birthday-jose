@@ -1,0 +1,155 @@
+/* ═══════════════════════════════════════════════════════════
+   FOOTER — Cierre emotivo y elegante
+   ═══════════════════════════════════════════════════════════ */
+
+.footer {
+  position: relative;
+  padding: var(--space-xl) var(--space-md);
+  padding-bottom: var(--space-lg);
+  background: linear-gradient(
+    180deg,
+    var(--color-ivory) 0%,
+    var(--color-cream, #FFF8F0) 30%,
+    var(--color-rose-soft) 100%
+  );
+  overflow: hidden;
+}
+
+/* ── Separador ornamental ── */
+.footer__separator {
+  display: flex;
+  justify-content: center;
+  color: var(--color-champagne);
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Contenido ── */
+.footer__content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* ── Estrellas decorativas ── */
+.footer__stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footer__star {
+  position: absolute;
+  color: var(--color-gold);
+  opacity: 0.2;
+  animation: float 6s ease-in-out infinite;
+}
+
+.footer__star--1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.footer__star--2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1.5s;
+}
+
+.footer__star--3 {
+  top: 50%;
+  left: 5%;
+  animation-delay: 3s;
+}
+
+.footer__star--4 {
+  bottom: 25%;
+  right: 8%;
+  animation-delay: 4.5s;
+}
+
+.footer__star--5 {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+/* ── Mensaje principal ── */
+.footer__message {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-gray-medium);
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+/* ── Firma ── */
+.footer__signature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__name {
+  font-family: var(--font-script);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  color: var(--color-gray-dark);
+  line-height: 1;
+}
+
+.footer__heart {
+  font-size: var(--fs-lg);
+  color: var(--color-rose-accent);
+  animation: pulse 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* ── Fecha de cierre ── */
+.footer__date {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--color-gray-light);
+  margin-top: var(--space-sm);
+}
+
+/* ── Responsive: Tablet+ ── */
+@media (min-width: 768px) {
+  .footer {
+    padding: var(--space-2xl) var(--space-lg);
+    padding-bottom: var(--space-xl);
+  }
+
+  .footer__message {
+    font-size: var(--fs-lg);
+    max-width: 500px;
+  }
+
+  .footer__name {
+    font-size: var(--fs-2xl);
+  }
+
+  .footer__separator svg {
+    width: 260px;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .footer__star {
+    animation: none;
+  }
+
+  .footer__heart {
+    animation: none;
+  }
+}

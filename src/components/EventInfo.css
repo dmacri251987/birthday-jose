@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════════════════════
+   EVENT INFO — Detalles del evento
+   ═══════════════════════════════════════════════════════════ */
+
+.event-info {
+  padding: var(--space-xl) var(--space-md);
+  background: var(--color-white);
+}
+
+.event-info__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Título ── */
+.event-info__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  color: var(--color-gray-dark);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Ornamento ── */
+.event-info__ornament {
+  display: flex;
+  justify-content: center;
+  color: var(--color-champagne);
+  margin-bottom: var(--space-lg);
+}
+
+/* ── Bloque de fecha destacada ── */
+.event-info__date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-md);
+  max-width: 200px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(255, 248, 240, 0.5), rgba(245, 230, 224, 0.3));
+}
+
+.event-info__date-day {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  line-height: 1;
+}
+
+.event-info__date-month {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-champagne-dark);
+}
+
+.event-info__date-year {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--color-gray-light);
+  letter-spacing: 0.1em;
+}
+
+/* ── Cards de información ── */
+.event-info__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.event-info__card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-ivory);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.event-info__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ── Icono de card ── */
+.event-info__card-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-rose-soft), var(--color-ivory-warm));
+  color: var(--color-champagne-dark);
+}
+
+/* ── Contenido de card ── */
+.event-info__card-content {
+  flex: 1;
+}
+
+.event-info__card-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  margin-bottom: 0.25rem;
+}
+
+.event-info__card-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 300;
+  color: var(--color-gray-medium);
+  line-height: 1.5;
+}
+
+/* ── Botón ── */
+.event-info__btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.event-info__btn {
+  min-width: 200px;
+}
+
+/* ── Responsive: Tablet+ ── */
+@media (min-width: 768px) {
+  .event-info {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .event-info__date-block {
+    max-width: 240px;
+    padding: var(--space-lg);
+  }
+}

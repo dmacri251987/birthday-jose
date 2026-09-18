@@ -1,0 +1,121 @@
+/* ═══════════════════════════════════════════════════════════
+   MUSIC PLAYER — Botón flotante de control de música
+   ═══════════════════════════════════════════════════════════ */
+
+.music-player {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-champagne), var(--color-gold));
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  z-index: 900;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.music-player:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+}
+
+.music-player:active {
+  transform: scale(0.95);
+}
+
+/* ── Icono ── */
+.music-player__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+/* ── Ondas de sonido ── */
+.music-player__waves {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.music-player__wave {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-champagne);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ondas animadas solo cuando está sonando */
+.music-player--playing .music-player__wave--1 {
+  animation: musicWave 2s ease-out infinite;
+}
+
+.music-player--playing .music-player__wave--2 {
+  animation: musicWave 2s ease-out infinite 0.5s;
+}
+
+.music-player--playing .music-player__wave--3 {
+  animation: musicWave 2s ease-out infinite 1s;
+}
+
+@keyframes musicWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ── Estado playing: pulso suave en el botón ── */
+.music-player--playing {
+  animation: musicPulse 2s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(212, 175, 55, 0.5);
+  }
+}
+
+/* ── Responsive: Desktop ── */
+@media (min-width: 768px) {
+  .music-player {
+    width: 56px;
+    height: 56px;
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .music-player--playing {
+    animation: none;
+  }
+
+  .music-player--playing .music-player__wave {
+    animation: none;
+    opacity: 0;
+  }
+}

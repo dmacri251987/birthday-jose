@@ -1,0 +1,217 @@
+/* ═══════════════════════════════════════════════════════════
+   HERO — Pantalla completa de bienvenida
+   ═══════════════════════════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--space-lg) var(--space-md);
+  overflow: hidden;
+  background: linear-gradient(
+    160deg,
+    var(--color-ivory) 0%,
+    var(--color-ivory-warm) 30%,
+    var(--color-rose-soft) 70%,
+    #F0DDD6 100%
+  );
+}
+
+/* ── Decoraciones de fondo ── */
+.hero__bg-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero__circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+}
+
+.hero__circle--1 {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  right: -80px;
+  background: radial-gradient(circle, var(--color-gold), transparent 70%);
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero__circle--2 {
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  left: -60px;
+  background: radial-gradient(circle, var(--color-rose-accent), transparent 70%);
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+.hero__circle--3 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: -40px;
+  background: radial-gradient(circle, var(--color-champagne), transparent 70%);
+  animation: float 12s ease-in-out infinite 4s;
+}
+
+/* ── Contenido principal ── */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-sm);
+}
+
+/* ── Ornamento superior ── */
+.hero__ornament-top {
+  color: var(--color-champagne-dark);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
+  margin-bottom: var(--space-sm);
+}
+
+.hero__ornament-top--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Nombre principal ── */
+.hero__name {
+  font-family: var(--font-script);
+  font-size: var(--fs-3xl);
+  font-weight: 400;
+  color: var(--color-gray-dark);
+  line-height: 1.1;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1.2s ease 0.4s, transform 1.2s ease 0.4s;
+}
+
+.hero__name--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Subtítulo ── */
+.hero__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-champagne-dark);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 1s ease 0.9s, transform 1s ease 0.9s;
+}
+
+.hero__subtitle--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Fecha ── */
+.hero__date {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: var(--space-sm);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 1s ease 1.3s, transform 1s ease 1.3s;
+}
+
+.hero__date--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero__date-line {
+  width: 40px;
+  height: 1px;
+  background: var(--color-champagne);
+}
+
+.hero__date-text {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--color-gray-dark);
+}
+
+/* ── Ornamento inferior ── */
+.hero__ornament-bottom {
+  color: var(--color-champagne-dark);
+  opacity: 0;
+  transition: opacity 1s ease 1.6s;
+  margin-top: var(--space-sm);
+}
+
+.hero__ornament-bottom--visible {
+  opacity: 1;
+}
+
+/* ── Botón scroll ── */
+.hero__scroll-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-champagne-dark);
+  opacity: 0;
+  transition: opacity 1s ease 2s;
+  z-index: 2;
+}
+
+.hero__scroll-btn--visible {
+  opacity: 1;
+}
+
+.hero__scroll-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero__scroll-arrow {
+  animation: bounce 2s ease infinite;
+}
+
+.hero__scroll-btn:hover .hero__scroll-arrow {
+  animation-play-state: paused;
+  transform: translateY(3px);
+  transition: transform 0.3s ease;
+}
+
+/* ── Responsive: Tablet+ ── */
+@media (min-width: 768px) {
+  .hero__date-line {
+    width: 60px;
+  }
+
+  .hero__ornament-top svg {
+    width: 160px;
+  }
+}
