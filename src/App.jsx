@@ -3,7 +3,7 @@ import Countdown from './components/Countdown'
 import EventInfo from './components/EventInfo'
 import RSVP from './components/RSVP'
 import Footer from './components/Footer'
-import MusicPlayer from './components/MusicPlayer'
+// import MusicPlayer from './components/MusicPlayer'
 import './App.css'
 
 /**
@@ -15,7 +15,6 @@ import './App.css'
  * 3. EventInfo (detalles del evento)
  * 4. RSVP (confirmación de asistencia)
  * 5. Footer (cierre emotivo)
- * 6. MusicPlayer (flotante, fuera del flujo)
  */
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
       <EventInfo />
       <RSVP />
       <Footer />
-      <MusicPlayer />
+      {/* <MusicPlayer /> */}
     </div>
   )
 }
