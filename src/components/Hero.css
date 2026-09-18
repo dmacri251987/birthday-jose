@@ -12,13 +12,15 @@
   min-height: 100dvh;
   padding: var(--space-lg) var(--space-md);
   overflow: hidden;
-  background: linear-gradient(
-    160deg,
-    var(--color-ivory) 0%,
-    var(--color-ivory-warm) 30%,
-    var(--color-rose-soft) 70%,
-    #F0DDD6 100%
-  );
+  background: url('/images/Background.png') center center / cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 254, 249, 0.3);
+  z-index: 0;
 }
 
 /* ── Decoraciones de fondo ── */
