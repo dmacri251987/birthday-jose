@@ -25,13 +25,13 @@ export default function EventInfo() {
     <section className="event-info" id="event-info" aria-label="Detalles del evento">
       <div className="event-info__container">
         {/* Título */}
-        <h2 className="event-info__title" ref={titleRef}>
-          <span className="animate-on-scroll">Detalles del Evento</span>
+        <h2 className="event-info__title animate-on-scroll" ref={titleRef}>
+          Detalles del Evento
         </h2>
 
         {/* Ornamento */}
-        <div className="event-info__ornament" ref={ornamentRef} aria-hidden="true">
-          <svg width="100" height="16" viewBox="0 0 100 16" fill="none" className="animate-on-scroll">
+        <div className="event-info__ornament animate-on-scroll" ref={ornamentRef} aria-hidden="true">
+          <svg width="100" height="16" viewBox="0 0 100 16" fill="none">
             <path d="M0 8 H38 M62 8 H100" stroke="currentColor" strokeWidth="0.5" />
             <path d="M44 8 L50 2 L56 8 L50 14 Z" stroke="currentColor" strokeWidth="0.5" fill="none" />
           </svg>

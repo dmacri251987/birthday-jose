@@ -56,10 +56,9 @@ export default function Countdown() {
     <section
       id="countdown"
       className="countdown-section"
-      ref={sectionRef}
       aria-label="Cuenta regresiva"
     >
-      <div className="countdown animate-on-scroll">
+      <div className="countdown animate-on-scroll" ref={sectionRef}>
         {/* Título */}
         <h2 className="countdown__title">Faltan</h2>
 

@@ -1,6 +1,6 @@
 /**
  * Datos centralizados del evento - Cumpleaños 15 de Josefina Casara
- * 
+ *
  * Modificar este archivo para actualizar la información del evento.
  * Todos los placeholders marcados con [CORCHETES] deben ser reemplazados
  * con la información real.
@@ -15,31 +15,22 @@ const eventData = {
   fechaDia: "30",
   fechaMes: "Octubre",
   fechaAnio: "2026",
-  horario: "[HORARIO]",
-  
+  horario: "20 Horas",
+
   /* ── Ubicación ── */
-  lugar: "[NOMBRE DEL SALÓN]",
-  direccion: "[DIRECCIÓN]",
-  googleMapsUrl: "[GOOGLE_MAPS_URL]",
-  
+  lugar: "El Palmar Garden house",
+  direccion:
+    "Escultor Santiago Parodi 5240, B1678 Caseros, Provincia de Buenos Aires",
+  googleMapsUrl:
+    "https://www.google.com/maps/place/El+Palmar+Garden+house/data=!4m2!3m1!1s0x0:0xad847f46caebafcd?sa=X&ved=1t:2428&hl=es-AR&ictx=111",
+
   /* ── Formulario de confirmación ── */
-  googleFormUrl: "[GOOGLE_FORM_URL]",
-  
+  googleFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLScFIc-ObPHIPsAPecVi1FfVC5A2oQcELBHfUPhFgTcfuKsj8A/viewform?usp=publish-editor",
+
   /* ── Multimedia ── */
   musica: "/audio/musica.mp3",
-  fotos: [
-    { id: 1, src: "/images/foto-01.jpg", alt: "Josefina - Foto 1" },
-    { id: 2, src: "/images/foto-02.jpg", alt: "Josefina - Foto 2" },
-    { id: 3, src: "/images/foto-03.jpg", alt: "Josefina - Foto 3" },
-    { id: 4, src: "/images/foto-04.jpg", alt: "Josefina - Foto 4" },
-    { id: 5, src: "/images/foto-05.jpg", alt: "Josefina - Foto 5" },
-    { id: 6, src: "/images/foto-06.jpg", alt: "Josefina - Foto 6" },
-    { id: 7, src: "/images/foto-07.jpg", alt: "Josefina - Foto 7" },
-    { id: 8, src: "/images/foto-08.jpg", alt: "Josefina - Foto 8" },
-    { id: 9, src: "/images/foto-09.jpg", alt: "Josefina - Foto 9" },
-    { id: 10, src: "/images/foto-10.jpg", alt: "Josefina - Foto 10" },
-  ],
-  
+
   /* ── Mensajes ── */
   mensajeFinal: "Te espero para compartir juntos una noche inolvidable.",
 };

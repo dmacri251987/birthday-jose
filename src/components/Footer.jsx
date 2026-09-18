@@ -28,7 +28,7 @@ export default function Footer() {
       </div>
 
       {/* Contenido principal */}
-      <div className="footer__content" ref={containerRef}>
+      <div className="footer__content animate-on-scroll" ref={containerRef}>
         {/* Decoraciones de estrellas */}
         <div className="footer__stars" aria-hidden="true">
           <Star className="footer__star footer__star--1" size={12} />
@@ -39,22 +39,22 @@ export default function Footer() {
         </div>
 
         {/* Mensaje principal */}
-        <p className="footer__message animate-on-scroll">
+        <p className="footer__message">
           {eventData.mensajeFinal}
         </p>
 
         {/* Firma */}
-        <div className="footer__signature" ref={signatureRef}>
-          <span className="footer__name animate-on-scroll delay-2">
+        <div className="footer__signature animate-on-scroll delay-2" ref={signatureRef}>
+          <span className="footer__name">
             {eventData.nombre.split(' ')[0]}
           </span>
-          <span className="footer__heart animate-on-scroll delay-3" aria-hidden="true">
+          <span className="footer__heart" aria-hidden="true">
             ♡
           </span>
         </div>
 
         {/* Fecha de cierre */}
-        <p className="footer__date animate-on-scroll delay-4">
+        <p className="footer__date">
           {eventData.fechaDisplay}
         </p>
       </div>
