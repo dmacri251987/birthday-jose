@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════════════
-   DRESS CODE — Código de vestimenta
+   PHOTO SHARE — Código QR para compartir fotos
    ═══════════════════════════════════════════════════════════ */
 
-.dress-code {
+.photo-share {
   position: relative;
   padding: var(--space-xl) var(--space-md);
   background: transparent;
@@ -10,7 +10,7 @@
 }
 
 /* ── Contenedor ── */
-.dress-code__container {
+.photo-share__container {
   position: relative;
   z-index: 1;
   max-width: 500px;
@@ -22,15 +22,15 @@
   gap: var(--space-md);
 }
 
-/* ── Ícono SVG ── */
-.dress-code__icon {
+/* ── Ícono de cámara ── */
+.photo-share__icon {
   color: var(--color-champagne);
   margin-bottom: var(--space-xs);
   opacity: 0.85;
 }
 
 /* ── Título ── */
-.dress-code__title {
+.photo-share__title {
   font-family: var(--font-display);
   font-size: var(--fs-lg);
   font-weight: 500;
@@ -38,8 +38,8 @@
   letter-spacing: 0.04em;
 }
 
-/* ── Texto principal "Elegante Sport" ── */
-.dress-code__text {
+/* ── Mensaje principal ── */
+.photo-share__message {
   font-family: var(--font-script);
   font-size: var(--fs-2xl);
   font-weight: 400;
@@ -49,8 +49,48 @@
   position: relative;
 }
 
+/* ── Contenedor del QR ── */
+.photo-share__qr-wrapper {
+  padding: var(--space-sm);
+  border: 1.5px solid var(--color-champagne);
+  border-radius: var(--radius-md);
+  background: var(--color-ivory);
+  box-shadow: var(--shadow-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.photo-share__qr-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ── Imagen del QR ── */
+.photo-share__qr-img {
+  width: 180px;
+  height: 180px;
+  display: block;
+}
+
+/* ── Texto debajo del QR ── */
+.photo-share__qr-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  color: var(--color-gray-light);
+  letter-spacing: 0.03em;
+  margin-top: calc(var(--space-xs) * -1);
+}
+
+/* ── Link alternativo ── */
+.photo-share__link {
+  margin-top: var(--space-xs);
+}
+
 /* ── Ornamento decorativo ── */
-.dress-code__ornament {
+.photo-share__ornament {
   color: var(--color-champagne);
   margin-top: var(--space-xs);
   opacity: 0.7;
@@ -58,12 +98,17 @@
 
 /* ── Responsive: Tablet+ ── */
 @media (min-width: 768px) {
-  .dress-code {
+  .photo-share {
     padding: var(--space-2xl) var(--space-lg);
   }
 
-  .dress-code__icon svg {
+  .photo-share__icon svg {
     width: 56px;
     height: 56px;
+  }
+
+  .photo-share__qr-img {
+    width: 220px;
+    height: 220px;
   }
 }

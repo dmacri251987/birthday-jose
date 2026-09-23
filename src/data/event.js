@@ -31,6 +31,11 @@ const eventData = {
   /* ── Multimedia ── */
   musica: "/audio/musica.mp3",
 
+  /* ── Compartir fotos ── */
+  fotosDriveUrl:
+    "https://drive.google.com/drive/folders/1EQEHRhwL0pX2GsJ44cxHWmaQ2EWcZGA3?usp=drive_link",
+  fotosMensaje: "¡Compartime tus fotos!",
+
   /* ── Mensajes ── */
   mensajeFinal: "Te espero para compartir juntos una noche inolvidable.",
 };

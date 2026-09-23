@@ -4,6 +4,7 @@ import Countdown from './components/Countdown'
 import EventInfo from './components/EventInfo'
 import RSVP from './components/RSVP'
 import DressCode from './components/DressCode'
+import PhotoShare from './components/PhotoShare'
 import Footer from './components/Footer'
 // import MusicPlayer from './components/MusicPlayer'
 import './App.css'
@@ -17,7 +18,8 @@ import './App.css'
  * 3. EventInfo (detalles del evento)
  * 4. RSVP (confirmación de asistencia)
  * 5. DressCode (código de vestimenta)
- * 6. Footer (cierre emotivo)
+ * 6. PhotoShare (QR para compartir fotos)
+ * 7. Footer (cierre emotivo)
  */
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
       <EventInfo />
       <RSVP />
       <DressCode />
+      <PhotoShare />
       <Footer />
       {/* <MusicPlayer /> */}
     </div>
