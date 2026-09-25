@@ -1,17 +1,17 @@
-import BackgroundGradient from './components/BackgroundGradient'
-import Hero from './components/Hero'
-import Countdown from './components/Countdown'
-import EventInfo from './components/EventInfo'
-import RSVP from './components/RSVP'
-import GiftDetails from './components/GiftDetails'
-import PhotoShare from './components/PhotoShare'
-import Footer from './components/Footer'
+import BackgroundGradient from "./components/BackgroundGradient";
+import Hero from "./components/Hero";
+import Countdown from "./components/Countdown";
+import EventInfo from "./components/EventInfo";
+import RSVP from "./components/RSVP";
+import GiftDetails from "./components/GiftDetails";
+import PhotoShare from "./components/PhotoShare";
+import Footer from "./components/Footer";
 // import MusicPlayer from './components/MusicPlayer'
-import './App.css'
+import "./App.css";
 
 /**
  * App — Componente raíz de la invitación.
- * 
+ *
  * Orden de secciones:
  * 1. Hero (bienvenida a pantalla completa)
  * 2. Countdown (cuenta regresiva)
@@ -30,11 +30,11 @@ function App() {
       <EventInfo />
       <RSVP />
       <GiftDetails />
-      <PhotoShare />
+      {/* <PhotoShare /> */}
       <Footer />
       {/* <MusicPlayer /> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

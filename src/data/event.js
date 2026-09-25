@@ -15,7 +15,7 @@ const eventData = {
   fechaDia: "30",
   fechaMes: "Octubre",
   fechaAnio: "2026",
-  horario: "20 Horas",
+  horario: "20:00 a 24:00 hs",
 
   /* ── Ubicación ── */
   lugar: "El Palmar Garden house",
