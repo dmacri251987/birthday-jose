@@ -92,7 +92,7 @@
 /* ── Nombre principal ── */
 .hero__name {
   font-family: var(--font-script);
-  font-size: var(--fs-3xl);
+  font-size: clamp(3.5rem, 12vw, 7rem);
   font-weight: 400;
   color: var(--color-gray-dark);
   line-height: 1.1;

@@ -5,6 +5,7 @@
 .photo-share {
   position: relative;
   padding: var(--space-xl) var(--space-md);
+  padding-top: var(--space-md);
   background: transparent;
   overflow: hidden;
 }
@@ -100,6 +101,7 @@
 @media (min-width: 768px) {
   .photo-share {
     padding: var(--space-2xl) var(--space-lg);
+    padding-top: var(--space-lg);
   }
 
   .photo-share__icon svg {

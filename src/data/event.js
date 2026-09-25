@@ -8,7 +8,7 @@
 
 const eventData = {
   /* ── Información principal ── */
-  nombre: "Josefina Casara",
+  nombre: "Josefina",
   titulo: "Mis 15 años",
   fecha: "2026-10-30T21:00:00-03:00",
   fechaDisplay: "30 · 10 · 2026",

@@ -1,6 +1,8 @@
 .gift-details {
   position: relative;
   padding: var(--space-xl) var(--space-md);
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
   background: transparent;
   overflow: hidden;
 }
@@ -173,6 +175,8 @@
 @media (min-width: 768px) {
   .gift-details {
     padding: var(--space-2xl) var(--space-lg);
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
   }
 
   .gift-details__icon svg {
