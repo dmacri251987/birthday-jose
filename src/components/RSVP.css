@@ -5,7 +5,7 @@
 .rsvp {
   position: relative;
   padding: var(--space-xl) var(--space-md);
-  padding-bottom: var(--space-md);
+  padding-bottom: var(--space-xl);
   background: transparent;
   overflow: hidden;
 }
@@ -120,7 +120,7 @@
 @media (min-width: 768px) {
   .rsvp {
     padding: var(--space-2xl) var(--space-lg);
-    padding-bottom: var(--space-lg);
+    padding-bottom: var(--space-2xl);
   }
 
   .rsvp__btn {
