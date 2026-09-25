@@ -102,6 +102,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
+  overflow: visible;
 }
 
 .footer__name {
@@ -110,6 +112,7 @@
   font-weight: 400;
   color: var(--color-gray-dark);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .footer__heart {
