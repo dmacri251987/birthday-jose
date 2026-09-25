@@ -5,7 +5,6 @@
 .photo-share {
   position: relative;
   padding: var(--space-xl) var(--space-md);
-  padding-top: var(--space-xl);
   background: transparent;
   overflow: hidden;
 }
@@ -60,7 +59,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .photo-share__qr-wrapper:hover {

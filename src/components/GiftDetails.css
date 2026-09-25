@@ -1,12 +1,8 @@
 .gift-details {
   position: relative;
   padding: var(--space-xl) var(--space-md);
-  padding-top: var(--space-xl);
-  padding-bottom: var(--space-xl);
   background: transparent;
   overflow: hidden;
-  min-height: 100dvh;
-  scroll-snap-align: start;
 }
 
 .gift-details__container {
@@ -50,7 +46,11 @@
   margin-top: var(--space-sm);
   overflow: hidden;
   text-align: left;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(212, 165, 116, 0.12));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.62),
+    rgba(212, 165, 116, 0.12)
+  );
   border: 1px solid var(--color-champagne);
   border-top-color: var(--color-gold);
   border-radius: var(--radius-md);
@@ -111,7 +111,10 @@
   border: 1px solid var(--color-champagne);
   border-radius: var(--radius-sm);
   box-shadow: 0 2px 10px rgba(201, 169, 110, 0.12);
-  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .gift-details__copy-button:hover,
@@ -132,7 +135,11 @@
   margin-top: var(--space-xs);
   padding: 0.875rem 1.5rem;
   color: var(--color-gray-dark);
-  background: linear-gradient(135deg, var(--color-champagne), var(--color-gold));
+  background: linear-gradient(
+    135deg,
+    var(--color-champagne),
+    var(--color-gold)
+  );
   border: 1px solid var(--color-gold-dark);
   box-shadow: var(--shadow-gold);
 }
@@ -179,7 +186,6 @@
     padding: var(--space-2xl) var(--space-lg);
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
-    min-height: auto;
   }
 
   .gift-details__icon svg {

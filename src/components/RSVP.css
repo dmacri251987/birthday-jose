@@ -8,8 +8,6 @@
   padding-bottom: var(--space-xl);
   background: transparent;
   overflow: hidden;
-  min-height: 100dvh;
-  scroll-snap-align: start;
 }
 
 /* ── Decoración de fondo ── */
@@ -123,7 +121,6 @@
   .rsvp {
     padding: var(--space-2xl) var(--space-lg);
     padding-bottom: var(--space-2xl);
-    min-height: auto;
   }
 
   .rsvp__btn {

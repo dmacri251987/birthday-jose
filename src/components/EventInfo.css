@@ -6,8 +6,6 @@
   padding: var(--space-xl) var(--space-md);
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  min-height: 100dvh;
-  scroll-snap-align: start;
 }
 
 .event-info__container {
@@ -144,7 +142,6 @@
 @media (min-width: 768px) {
   .event-info {
     padding: var(--space-2xl) var(--space-lg);
-    min-height: auto;
   }
 
   .event-info__date-block {

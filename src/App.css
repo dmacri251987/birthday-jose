@@ -2,11 +2,4 @@
 .app {
   width: 100%;
   overflow-x: hidden;
-  scroll-snap-type: y proximity;
-}
-
-@media (min-width: 768px) {
-  .app {
-    scroll-snap-type: none;
-  }
 }
