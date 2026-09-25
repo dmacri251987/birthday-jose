@@ -73,6 +73,8 @@
   align-items: center;
   text-align: center;
   gap: var(--space-sm);
+  width: 100%;
+  overflow: visible;
 }
 
 /* ── Ornamento superior ── */
@@ -96,6 +98,8 @@
   font-weight: 400;
   color: var(--color-gray-dark);
   line-height: 1.1;
+  width: 100%;
+  white-space: nowrap;
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 1.2s ease 0.4s, transform 1.2s ease 0.4s;

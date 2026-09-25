@@ -4,6 +4,11 @@
 
 .footer {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
   padding: var(--space-xl) var(--space-md);
   padding-bottom: var(--space-lg);
   background: linear-gradient(
@@ -20,7 +25,8 @@
   display: flex;
   justify-content: center;
   color: var(--color-champagne);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
+  animation: fadeIn 1.5s ease forwards;
 }
 
 /* ── Contenido ── */
@@ -33,6 +39,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-md);
+  animation: fadeInUp 1.2s ease forwards;
 }
 
 /* ── Estrellas decorativas ── */
@@ -82,7 +89,7 @@
 /* ── Mensaje principal ── */
 .footer__message {
   font-family: var(--font-display);
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
   font-weight: 400;
   font-style: italic;
   color: var(--color-gray-medium);
@@ -99,7 +106,7 @@
 
 .footer__name {
   font-family: var(--font-script);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
   font-weight: 400;
   color: var(--color-gray-dark);
   line-height: 1;
@@ -140,6 +147,10 @@
 
   .footer__separator svg {
     width: 260px;
+  }
+
+  .footer__content {
+    gap: var(--space-lg);
   }
 }
 
