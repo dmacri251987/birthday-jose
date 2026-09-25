@@ -13,6 +13,8 @@
     var(--color-rose-soft) 100%
   );
   overflow: hidden;
+  min-height: 100dvh;
+  scroll-snap-align: start;
 }
 
 /* ── Separador ornamental ── */
@@ -127,6 +129,7 @@
   .footer {
     padding: var(--space-2xl) var(--space-lg);
     padding-bottom: var(--space-xl);
+    min-height: auto;
   }
 
   .footer__message {

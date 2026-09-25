@@ -13,6 +13,7 @@
   padding: var(--space-lg) var(--space-md);
   overflow: hidden;
   background: url('/images/Background.png') center center / cover no-repeat;
+  scroll-snap-align: start;
 }
 
 .hero::before {

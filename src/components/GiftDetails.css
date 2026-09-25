@@ -5,6 +5,8 @@
   padding-bottom: var(--space-xl);
   background: transparent;
   overflow: hidden;
+  min-height: 100dvh;
+  scroll-snap-align: start;
 }
 
 .gift-details__container {
@@ -177,6 +179,7 @@
     padding: var(--space-2xl) var(--space-lg);
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
+    min-height: auto;
   }
 
   .gift-details__icon svg {

@@ -5,6 +5,8 @@
 .countdown-section {
   padding: var(--space-xl) var(--space-md);
   background: transparent;
+  min-height: 100dvh;
+  scroll-snap-align: start;
 }
 
 .countdown {
@@ -112,6 +114,10 @@
 
 /* ── Responsive: Tablet+ ── */
 @media (min-width: 768px) {
+  .countdown-section {
+    min-height: auto;
+  }
+
   .countdown__grid {
     gap: var(--space-md);
   }
