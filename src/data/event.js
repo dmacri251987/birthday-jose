@@ -28,6 +28,10 @@ const eventData = {
   googleFormUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLScFIc-ObPHIPsAPecVi1FfVC5A2oQcELBHfUPhFgTcfuKsj8A/viewform?usp=publish-editor",
 
+  regaloMensaje: "Si querés hacerme un regalo, te dejo una opción:",
+  regaloCvu: "0000003100065192857601",
+  regaloAlias: "josefinacasara",
+
   /* ── Multimedia ── */
   musica: "/audio/musica.mp3",
 

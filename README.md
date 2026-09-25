@@ -20,7 +20,7 @@
 | ♿ **Accesibilidad** | Respeta `prefers-reduced-motion`, soporte completo de teclado |
 | 🔗 **Open Graph** | Preview optimizado al compartir por WhatsApp y redes sociales |
 | 📋 **Confirmación RSVP** | Integración con Google Forms para confirmar asistencia |
-| 👗 **Dress Code** | Sección elegante con código de vestimenta y animación al scroll |
+| 🎁 **Regalos** | Sección elegante con CVU y alias, acciones para copiar y animación al scroll |
 | 📸 **QR para fotos** | Código QR dinámico para que los invitados suban sus fotos a Google Drive |
 | 🗺️ **Google Maps** | Botón "Cómo llegar" con enlace directo a la ubicación |
 | ⚡ **Ultra liviana** | Sin backend, sin base de datos, sin dependencias CSS externas |
@@ -48,8 +48,8 @@ Cards elegantes con iconos SVG inline que muestran:
 ### 4. 💌 RSVP — Confirmación de asistencia
 Sección emotiva con un botón **"Confirmar Asistencia"** que abre un Google Form en una nueva pestaña. Incluye validación para no abrir URLs que contengan placeholders sin reemplazar.
 
-### 5. 👗 DressCode — Código de vestimenta
-Sección minimalista y elegante que indica el dress code **"Elegante Sport"**. Incluye un ícono SVG sutil de un vestido de noche, tipografía Playfair Display y animación de entrada al scroll.
+### 5. 🎁 GiftDetails — Regalos
+Sección minimalista y elegante titulada **"Un regalito"** que permite copiar el CVU, el alias o ambos datos juntos. Incluye confirmación temporal, fallback para navegadores sin Clipboard API y animación de entrada al scroll.
 
 ### 6. 📸 PhotoShare — Compartir fotos
 Sección con un **código QR generado dinámicamente** (API de QR Server) que apunta a una carpeta de Google Drive donde los invitados pueden subir sus fotos del evento. Incluye un enlace alternativo para quienes no pueden escanear el QR desde el celular.
@@ -150,7 +150,7 @@ BirthdayJose/
         ├── Countdown.jsx + Countdown.css ← Cuenta regresiva en tiempo real
         ├── EventInfo.jsx + EventInfo.css ← Detalles del evento (horario, lugar, dirección)
         ├── RSVP.jsx + RSVP.css         ← Confirmación de asistencia (Google Forms)
-        ├── DressCode.jsx + DressCode.css ← Código de vestimenta (Elegante Sport)
+        ├── GiftDetails.jsx + GiftDetails.css ← Datos de regalo con acciones para copiar
         ├── PhotoShare.jsx + PhotoShare.css ← QR para compartir fotos (Google Drive)
         ├── MusicPlayer.jsx + MusicPlayer.css ← Reproductor de música flotante
         └── Footer.jsx + Footer.css     ← Cierre emotivo con firma
@@ -211,9 +211,14 @@ googleFormUrl: "https://forms.gle/abc123xyz",
 | `fechaDia` | Día del mes | `"30"` |
 | `fechaMes` | Mes en texto | `"Octubre"` |
 | `fechaAnio` | Año | `"2026"` |
+| `regaloMensaje` | Mensaje introductorio de la sección de regalos | `"Si querés hacerme un regalo, te dejo una opción:"` |
+| `regaloCvu` | CVU para transferir el regalo | `"0000003100065192857601"` |
+| `regaloAlias` | Alias asociado al CVU | `"josefinacasara"` |
 | `mensajeFinal` | Mensaje del footer | `"Te espero para compartir juntos una noche inolvidable."` |
 | `fotosDriveUrl` | URL de Google Drive para subir fotos | `"https://drive.google.com/drive/folders/..."` |
 | `fotosMensaje` | Mensaje de la sección de fotos | `"¡Compartime tus fotos!"` |
+
+Para personalizar los regalos, editá `regaloMensaje`, `regaloCvu` y `regaloAlias` en `src/data/event.js`. `GiftDetails` toma esos valores como fuente única de verdad; no es necesario modificar el componente.
 
 > 💡 **Importante:** Si modificás la `fecha`, asegurate de usar el formato ISO 8601 con zona horaria (`-03:00` para Argentina). El countdown depende de este valor.
 
